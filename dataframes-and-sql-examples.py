@@ -11,3 +11,13 @@ df.show()
 
 # Print the schema in a tree format
 df.printSchema()
+
+# Select only the "name" column
+df.select("title").show()
+
+# register dataframe as table
+df.registerTempTable("session")
+
+# use sql to query the table
+years = sqlContext.sql("select year from session")
+years.show()
