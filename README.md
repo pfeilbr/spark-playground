@@ -4,13 +4,18 @@ Project to learn and experiment with the [Spark](https://spark.apache.org) clust
 
 ## Setup
 
-spark installed at `~/dev/spark-1.3.1-bin-hadoop2.6` and is part of `PATH` in `.bash_profile`
+spark installed at `~/dev/spark-2.2.0-bin-hadoop2.7` and is part of `PATH` in `.bash_profile`
 
-	export PATH="~/dev/spark-1.3.1-bin-hadoop2.6/bin:$PATH"
+	export SPARK_HOME=~/dev/spark-2.2.0-bin-hadoop2.7
+	export PATH=$SPARK_HOME/bin:$PATH
 
 ## Running an example
 
 	$ spark-submit dataframes-and-sql-examples.py
+
+## Docker
+
+	$ docker run -i -t -P --name spark -v /Users/pfeilbr/Dropbox/mac01/Users/brianpfeil/projects/spark-playground:/src sequenceiq/spark:latest bash
 
 ## Resources
 
